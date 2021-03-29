@@ -195,4 +195,9 @@ yum install -y wget
 cat /etc/redhat-release
 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo
 yum makecache
+
+docker ps -a 
+docker commit 35b6ace7a5e7  mycentos:v1.0
+docker run -it mycentos:v1.0 /bin/bash 
+
 ```
