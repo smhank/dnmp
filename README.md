@@ -177,3 +177,22 @@ $ redis-cli -h127.0.0.1
 这里`host`参数不能用localhost是因为它默认是通过sock文件与mysql通信，
 而容器与主机文件系统已经隔离，所以需要通过TCP方式连接，所以需要指定IP。
 
+BusyBox 是一个集成了一百多个最常用 Linux 命令和工具（如 cat、echo、grep、mount、 telnet 等）的精简工具箱，
+它只需要几 MB 的大小，很方便进行各种快速验证，被誉为“Linux 系统的瑞士军刀”
+```shell
+docker search busybox
+docker pull busybox 
+docker run -it busybox
+```
+
+```shell
+docker run -it centos /bin/bash
+docker exec -it centos /bin/bash
+yum install vim
+yum install -y net-tools
+yum install -y wget
+--换源
+cat /etc/redhat-release
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo
+yum makecache
+```
